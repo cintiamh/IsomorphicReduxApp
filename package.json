@@ -1,0 +1,24 @@
+{
+  "name": "isomorphic",
+  "version": "0.0.1",
+  "description": "Following Isomorphic Redux Application tutorial.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cintiamh/IsomorphicReduxApp.git"
+  },
+  "keywords": [
+    "Redux",
+    "React",
+    "Isomorphic"
+  ],
+  "author": "Cintia Higashi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cintiamh/IsomorphicReduxApp/issues"
+  },
+  "homepage": "https://github.com/cintiamh/IsomorphicReduxApp#readme"
+}
