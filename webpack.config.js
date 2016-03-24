@@ -4,8 +4,8 @@ var path = require('path');
 var config = {
     entry: [
         'webpack/hot/dev-server',
-        'webpack-dev-server/client?http://localhost:3000',
-        './src/client'
+        'webpack-dev-server/client?http://localhost:8080',
+        './src/client/index'
     ],
     resolve: {
         root: [
@@ -25,11 +25,23 @@ var config = {
     module: {
         loaders: [
             {
-                test: /\.js$/,
-                loaders: ['babel'],
+                test: /\.jsx?$/,
+                loaders: ['react-hot', 'babel'],
                 exclude: /(node_modules|bower_components)/
             }
         ]
+    },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoErrorsPlugin()
+    ],
+    devtool: 'inline-source-map',
+    devServer: {
+        hot: true,
+        proxy: {
+            '*': 'http://127.0.0.1:' + (process.env.PORT || 3000)
+        },
+        host: '127.0.0.1'
     }
 };
 

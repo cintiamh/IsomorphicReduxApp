@@ -126,3 +126,8 @@ $ touch src/shared/components/index.jsx
 $ touch src/shared/routes.jsx
 ```
 
+Create client/index.jsx:
+
+```
+$ touch src/client/index.jsx
+```
